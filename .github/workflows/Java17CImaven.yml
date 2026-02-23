@@ -30,7 +30,6 @@ jobs:
         cache: maven
         
     - name: Build and test with Maven
-      # CAMBIO AQUÍ: Forzamos la generación del reporte de JaCoCo
       run: mvn -B clean test jacoco:report
 
     - name: Update dependency graph
