@@ -37,8 +37,11 @@ public class ReusablePoolTest {
 	public void testGetInstance() {
 		// Obtengo la instancia del pool
 		ReusablePool pool1 = ReusablePool.getInstance();
+		ReusablePool pool2 = ReusablePool.getInstance();
 		// Y compruebo que no es nula
 		assertNotNull(pool1);
+		// Y compruebo que las dos instancias son la misma
+		assertSame(pool1, pool2);
 	}
 
 	/**
