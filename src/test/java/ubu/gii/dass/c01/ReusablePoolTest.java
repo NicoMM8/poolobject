@@ -12,9 +12,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Disabled;
 
 
-
 /**
- * @author alumno
+ * @author Nicolas Muñoz Martín, Alejandro Navas García, Gaspar Campos-Ansó Fernández, Josué Gabriel Granados Hernández
  *
  */
 public class ReusablePoolTest {
@@ -23,7 +22,6 @@ public class ReusablePoolTest {
 	@BeforeAll
 	public static void setUp(){
 	}
-
 	
 	@AfterAll
 	public static void tearDown() throws Exception {
