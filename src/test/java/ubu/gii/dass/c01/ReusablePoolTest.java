@@ -9,7 +9,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Disabled;
+
 
 
 /**
@@ -83,11 +83,17 @@ public class ReusablePoolTest {
 		//Sacamos un objeto para que el pool no esté lleno
 		Reusable r1 = pool.acquireReusable();
 
-		//Liberar objeto r1
+		//Escenario de éxito:Liberar objeto r1
 		assertDoesNotThrow(() -> {
 			pool.releaseReusable(r1);
 		}, "No debería lanzar excepción al devolver un objeto que estaba fuera del pool");
 
+		//Escenario de error: Intentamos devolver el objeto otra vez (al estar dentro, se debe lanzar la excepción)
+		assertThrows(DuplicatedInstanceException.class, () -> {
+			pool.releaseReusable(r1);
+		}, "Debería lanzar DuplicatedInstanceException si el objeto ya está en el pool");
+
+	}
 	
 
 
