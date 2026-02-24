@@ -65,6 +65,10 @@ public class ReusablePoolTest {
 		String mensaje2 = r2.util();
 		// Y compruebo que el mensaje contiene el texto esperado
 		assertTrue(mensaje2.contains("Uso del objeto Reutilizable"));
+		// Y ahora voy a probar a sacar un tercer objeto. Como el pool de 2 ya se ha vaciado, saltaría la excepción
+		assertThrows(NotFreeInstanceException.class, () -> {
+			pool.acquireReusable();
+		}, "Debería lanzar la excepción cuando el pool se vacía");
 	}
 
 	/**
