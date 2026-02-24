@@ -1,12 +1,19 @@
 # Informe de Prácticas: Medición de Entidades de Producto y Proceso Software
 
 **Asignatura:** Diseño Avanzado de Sistemas Software
+
+
 **Equipo:** [DAAS_O_G4_B]
+
+
 *Formado por:* 
 
 Gaspar Campos-Ansó Fernández(gcf1006@alu.ubu.es), 
-Josué Gabriel Granados Hernández(jgh1006@alu.ubu.es), 
+
+Josué Gabriel Granados Hernández(jgh1006@alu.ubu.es),
+
 Nicolás Muñoz Miguel(nmm1020@alu.ubu.es), y 
+
 Alejandro Navas García(ang1007@alu.ubu.es).
 
 
