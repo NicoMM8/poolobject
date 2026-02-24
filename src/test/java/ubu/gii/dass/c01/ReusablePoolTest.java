@@ -55,8 +55,8 @@ public class ReusablePoolTest {
 		assertNotNull(r1);
 		// Y voy a probar el uso del objeto sacado del pool
 		String mensaje = r1.util();
-		// Y compruebo que el mensaje no es nulo
-		assertNotNull(mensaje);
+		// Y compruebo que el mensaje contiene el texto esperado
+		assertTrue(mensaje.contains("Uso del objeto Reutilizable"));
 		
 	}
 
