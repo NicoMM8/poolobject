@@ -77,8 +77,22 @@ public class ReusablePoolTest {
 	 */
 	@Test
         @DisplayName("testReleaseReusable")
-        @Disabled("Not implemented yet")
-	public void testReleaseReusable() {
+    public void testReleaseReusable() throws Exception{
+		ReusablePool pool = ReusablePool.getInstance();
+
+		//Sacamos un objeto para que el pool no esté lleno
+		Reusable r1 = pool.acquireReusable();
+
+		//Liberar objeto r1
+		assertDoesNotThrow(() -> {
+			pool.releaseReusable(r1);
+		}, "No debería lanzar excepción al devolver un objeto que estaba fuera del pool");
+
+	
+
+
+
+	
 		
 	}
 
