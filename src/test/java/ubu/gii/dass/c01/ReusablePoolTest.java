@@ -34,18 +34,18 @@ public class ReusablePoolTest {
 	 */
         @Test
         @DisplayName("testGetInstance")
-        @Disabled("Not implemented yet")
 	public void testGetInstance() {
-		
+		// Obtengo la instancia del pool
+		ReusablePool pool1 = ReusablePool.getInstance();
+		// Y compruebo que no es nula
+		assertNotNull(pool1);
 	}
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#acquireReusable()}.
 	 */
-	@Test
+		@Test
         @DisplayName("testAcquireReusable")
-        
-
 	public void testAcquireReusable() throws Exception {
 
 		ReusablePool pool = ReusablePool.getInstance(); 
