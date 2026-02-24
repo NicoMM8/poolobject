@@ -3,7 +3,7 @@
  */
 package ubu.gii.dass.c01;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -44,10 +44,15 @@ public class ReusablePoolTest {
 	 */
 	@Test
         @DisplayName("testAcquireReusable")
-        @Disabled("Not implemented yet")
+        
 
-	public void testAcquireReusable() {
-		
+	public void testAcquireReusable() throws Exception {
+
+		ReusablePool pool = ReusablePool.getInstance(); 
+		//Saco el primer objeto disponible del pool
+		Reusable r1 = pool.acquireReusable();
+		//Y compruebo que no es nulo este objeto
+		assertNotNull(r1);
 	}
 
 	/**
