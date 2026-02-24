@@ -57,7 +57,14 @@ public class ReusablePoolTest {
 		String mensaje = r1.util();
 		// Y compruebo que el mensaje contiene el texto esperado
 		assertTrue(mensaje.contains("Uso del objeto Reutilizable"));
-		
+		// El pool se crea con dos objetos de normal. Por lo que sacamos el segundo
+		Reusable r2 = pool.acquireReusable();
+		// Y compruebo que no es nulo este objeto
+		assertNotNull(r2);
+		// Y voy a probar el uso del objeto sacado del pool
+		String mensaje2 = r2.util();
+		// Y compruebo que el mensaje contiene el texto esperado
+		assertTrue(mensaje2.contains("Uso del objeto Reutilizable"));
 	}
 
 	/**
