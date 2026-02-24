@@ -49,10 +49,15 @@ public class ReusablePoolTest {
 	public void testAcquireReusable() throws Exception {
 
 		ReusablePool pool = ReusablePool.getInstance(); 
-		//Saco el primer objeto disponible del pool
+		// Saco el primer objeto disponible del pool
 		Reusable r1 = pool.acquireReusable();
-		//Y compruebo que no es nulo este objeto
+		// Y compruebo que no es nulo este objeto
 		assertNotNull(r1);
+		// Y voy a probar el uso del objeto sacado del pool
+		String mensaje = r1.util();
+		// Y compruebo que el mensaje no es nulo
+		assertNotNull(mensaje);
+		
 	}
 
 	/**
