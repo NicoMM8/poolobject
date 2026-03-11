@@ -23,6 +23,9 @@
     <sonar.projectKey>navas-uni_poolobject</sonar.projectKey>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.sources>src/main/java</sonar.sources>
+    <sonar.java.binaries>target/classes</sonar.java.binaries>
+    <sonar.tests>src/test/java</sonar.tests>
   </properties>
 
    <dependencies>
